@@ -60,12 +60,15 @@ html, body {
     z-index: 1;
     width: calc(100% - 150px);
     margin: 0 auto;
+    height: 100%;
+    padding: 0px 0px 100px 0px;
     .background {
         left: 50%;
         width: 80%;
-        height: 100vh;
+        height: 100%;
         position: absolute;
         transform: translate(-50%);
+        overflow: hidden;
         background-color: #E7E7E7;
     }
     .video-wrapper {
@@ -78,8 +81,30 @@ html, body {
             object-fit: cover;
             object-position: 50% 50%;
             transform-origin: center center;
-            filter: saturate(1) brightness(1);
-            // filter: saturate(0.25) brightness(0.75);
+            // filter: saturate(1) brightness(1);
+            filter: saturate(0.25) brightness(0.75);
+        }
+    }
+    .projectBlock {
+        padding: 0px 150px;
+        position: relative;
+        z-index: 1;
+        .swiper-container-projects {
+            width: 100%;
+            .swiper-wrapper {
+                .swiper-slide {
+                    img {
+                        position: absolute;
+                        margin: -700px 0px 0px 0px;
+                    }
+                    .character-name {
+                        margin: -50px 0px 0px 0px;
+                        text-align: center;
+                        font-size: 72px;
+                        color: white; 
+                    }
+                }
+            }
         }
     }
 }
