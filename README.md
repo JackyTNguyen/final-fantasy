@@ -1,2 +1,2 @@
-# final_fantasy
+# final-fantasy
 product-landing-page
